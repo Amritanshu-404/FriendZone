@@ -1,0 +1,339 @@
+@import url("https://fonts.googleapis.com/css2?family=Gruppo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: MonaSans;
+  src: url(./Resources/Font/Mona-Sans-UltraLightWide.ttf);
+}
+
+@font-face {
+  font-family: FengardoNeue;
+  src: url(./Resources/Font/FengardoNeue_Regular.otf);
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  background: #181818;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: orangered;
+  border-radius: 10px;
+}
+
+.Group {
+  box-shadow: 2px 2px 50px 2px #181818;
+}
+
+.FCard {
+  box-shadow: 0 0 10px 10px #f6f8fb;
+}
+
+.Students img {
+  margin: 5px 0;
+  width: 22px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+.Card:hover hr {
+  border-color: #ffff;
+}
+
+.Card:hover img {
+  transition: all 0.5s;
+  transform: translateY(-5px);
+}
+
+.MovingText::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes Move {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.Text-container {
+  padding: 5px 0;
+  white-space: nowrap;
+  display: inline-block;
+  animation: Move 10s linear infinite;
+}
+
+.Text-container h1 {
+  display: inline-block;
+}
+
+.Text-container .Circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  display: inline-block;
+  margin: 0 2vw;
+}
+
+.Elem {
+  padding-left: 50px;
+  width: 100%;
+  height: 150px;
+  border-bottom: 1px solid #17171744;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.Elem h1 {
+  font-size: 30px;
+  font-family: "Raleway", sans-serif;
+  font-weight: bolder;
+}
+
+.Elem .Overlay {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(215, 88, 41);
+  transition: 0.3s all;
+}
+
+.Elem:hover .Overlay {
+  top: 0;
+}
+
+.ImageBox {
+  padding: 2px;
+  background-color: #202020;
+  border: 2px solid white;
+  border-radius: 10px;
+  width: 250px;
+  height: 250px;
+  position: relative;
+}
+
+.ImageBox h1 {
+  font-size: 20px;
+  color: white;
+  font-family: "Raleway", sans-serif;
+  position: absolute;
+  padding-left: 8px;
+  bottom: 22px;
+}
+
+.ImageBox p {
+  font-size: 15px;
+  color: #2e2e2e;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  position: absolute;
+  padding-left: 8px;
+  bottom: 10px;
+}
+
+.TextBox {
+  display: flex;
+  align-items: center;
+  margin-inline-end: 15px;
+  margin-left: 15px;
+  padding: 40px 20px;
+  background-color: #1f2224;
+  width: 400px;
+  height: 250px;
+  position: relative;
+  border-radius: 10px;
+}
+
+.TextBox p {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Gruppo", sans-serif;
+  line-height: 2;
+}
+
+.Footer .SocialLinks li {
+  list-style: none;
+  color: black;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #f6f8fb;
+}
+
+.Footer .ImportantLinks {
+  font-family: "Gruppo", sans-serif;
+}
+
+.SocialLinks li:hover {
+  cursor: pointer;
+  transition: all 0.5s;
+  box-shadow: 1px 1px 5px 2px #3a3a3a;
+}
+
+/* LoginSignup Page Code */
+.Login-container .Poster,
+.Signup-container .Poster {
+  transition: 0.5s ease;
+}
+
+.Login-container,
+.Signup-container {
+  transition: transform 0.5s ease;
+}
+
+.Login-container.flip,
+.Signup-container.flip {
+  transform: translateX(-100%);
+}
+
+.animated-text {
+  animation: fadeIn 1s ease-in-out forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.tips-list p {
+  font-weight: 300;
+  font-family: "Poppins";
+  opacity: 0;
+  transform: translateY(50px);
+  animation: MoveUp 1s ease-in-out forwards;
+}
+
+@keyframes MoveUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.PopularProject li {
+  border-radius: 20px;
+  display: inline-block;
+  border: 1px solid #ffff;
+  padding: 3px 4px;
+}
+
+.searched li {
+  box-shadow: inset #3a3a3a 1px 2px 50px;
+  padding: 6px;
+  border-radius: 10px;
+  margin-left: 19px;
+}
+
+.ProfileLeftArea input {
+  padding: 5px;
+  background-color: transparent;
+  border: 1px solid #1d1e1edc;
+  border-radius: 5px;
+  font-size: medium;
+  font-weight: 500;
+  width: 100%;
+}
+
+.ProfileLeftArea input::placeholder {
+  color: #3a3a3a;
+  font-size: 10px;
+}
+
+.ProfilePage .links button {
+  font-family: "Gruppo", sans-serif;
+  color: white;
+  padding: 4px 5px;
+  font-size: larger;
+  font-weight: 600;
+  background-color: #1f2224;
+  border-radius: 10px;
+  border: none;
+}
+
+.Workingwith {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@keyframes moveUpAndFadeOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes fadeInAndMoveUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-move-up-and-fade-out {
+  animation: moveUpAndFadeOut 1s ease 1s forwards;
+}
+
+.animate-fade-in-and-move-up {
+  animation: fadeInAndMoveUp 1s ease forwards;
+}
+
+.animate-pulse {
+  animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.1);
+  }
+}
