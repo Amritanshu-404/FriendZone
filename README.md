@@ -1,7 +1,7 @@
 
 # FriendZone
 
-![](https://photos.fife.usercontent.google.com/pw/AP1GczNlyhrqvEw6OlMfHuYioInX03lr0-cOjBLqO8RMpJgm28joUiaUtfl0=w1918-h928-s-no-gm?authuser=0)
+![](https://github.com/Amritanshu-404/FriendZone/blob/main/src/Resources/Front.png?raw=true)
 
 FriendZone is an open platform designed to connect students with like-minded partners who share similar skills and interests. This innovative network fosters collaboration and teamwork, enabling students to find the perfect partners for their projects and academic endeavors.
 
